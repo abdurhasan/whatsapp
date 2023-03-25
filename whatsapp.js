@@ -207,7 +207,7 @@ const sendMessage = async (session, receiver, message, delayMs = 1000) => {
         await delay(parseInt(delayMs))
 
         const result = await session.sendMessage(receiver, message)
-        console.log(result)
+        
         return result;
     } catch {
         return Promise.reject(null) // eslint-disable-line prefer-promise-reject-errors
